@@ -1,10 +1,11 @@
 import mysql2 from 'mysql2/promise';
-
+import dotenv from 'dotenv';
+dotenv.config();
 export const pool=mysql2.createPool({
-    host:'localhost',
-    port:3306,
-    user:'root',
-    database:'inventario',
-    password:'1044917779'
+    host:process.env.HOST_DB,
+    port:process.env.PORT_DB,
+    user:process.env.USER,
+    database:process.env.DATABASE,
+    password:process.env.PASSWORD
 });
 console.log('conexion exitosa');
