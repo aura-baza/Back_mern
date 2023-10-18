@@ -2,7 +2,7 @@ import express, { json }  from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
-import userRoute from "./src/routes/productRoutes.js";
+import userRoute from "./routes/productRoutes.js";
 
 
 const server=express();
